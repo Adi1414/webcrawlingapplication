@@ -1,0 +1,30 @@
+
+<%= link_to 'Go Back', root_path %>
+ <div class="title-rails">
+    RAILS ASSIGNMENT 
+ </div>
+  <div class="title-rails-2">
+WELCOME USER ! YOU ARE A (<%= current_user.roles.first.name.upcase  %>) 
+</div>
+ <%= form_tag search_data_path,method: :get do %>
+     <div class = "field-label">SEARCH FOR A SITE</div>
+     <div class= "rectangle">
+        <%= text_field_tag :search_data, params[:search_data], placeholder: 
+        "https://www.progton.com ", class: "input_cust" %>
+     </div>
+
+<%= link_to "Logout", destroy_user_session_path,class: "log_out btn btn-primary",method: :delete %>
+      
+       
+
+
+  <% end %>
+  <div class="format">
+<%= render 'layouts/search_table' %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to " DOWNLOAD CSV", download_data_path(format: :csv) ,class: "align-center download btn btn-primary" %>
+
+</div>

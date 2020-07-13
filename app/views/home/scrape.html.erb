@@ -1,3 +1,4 @@
+
  <div class="title-rails">
     RAILS ASSIGNMENT 
  </div>
@@ -18,4 +19,18 @@ WELCOME USER ! YOU ARE A (<%= current_user.roles.first.name.upcase  %>)
         <% end %>
       
 
+
   <% end %>
+  <div class="format">
+<%= render 'layouts/table' %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<%= link_to " DOWNLOAD CSV", download_data_path(format: :csv) ,class: "align-center download btn btn-primary" %>
+
+</div>
+
+
+<%= link_to 'Go Back', root_path %> |
+<%= link_to 'Search Data', search_data_path %>

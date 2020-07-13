@@ -16,12 +16,12 @@ ActiveRecord::Schema.define(version: 2020_07_07_161719) do
   enable_extension "plpgsql"
 
   create_table "crawled_data", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.string "email"
     t.string "phone_number"
+    t.string "site_name"
+    t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_crawled_data_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -54,5 +54,4 @@ ActiveRecord::Schema.define(version: 2020_07_07_161719) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
-  add_foreign_key "crawled_data", "users"
 end

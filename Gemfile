@@ -19,8 +19,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'pry', '~> 0.12.2'
-gem "font-awesome-rails"
-gem 'devise-bootstrap-views', '~> 1.0'
+
+gem 'kimurai'
 gem 'cancancan'
 gem 'rolify'
 gem 'nokogiri'

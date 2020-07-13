@@ -1,0 +1,32 @@
+<% if !@crawl.nil? %>
+
+
+<div class="col-sm-9">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th  class="table_tr" scope="col">SITE NAME</th>
+      <th  class="table_tr" scope="col">URL</th>
+      <th  class="table_tr" scope="col">EMAIL</th>
+       <% if has_role?("admin") %>
+      <th  class="table_tr" scope="col">PHONE</th>
+      <% end %>
+      <th  class="table_tr" scope="col">TIMESTAMP</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td><%= @crawl.site_name %></td>
+      <td><%= @crawl.url %></td>
+      <td><%= @crawl.email %></td>
+      <% if has_role?("admin") %>
+      <td><%= @crawl.phone_number %></td>
+       <% end %>
+      <td><%= @crawl.created_at %></td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+<% end %>
